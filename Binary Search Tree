@@ -1,0 +1,95 @@
+Recursion : it is a process in which a method calls itself continuously.
+
+package bridgelab;
+
+public class Recursion {
+   
+    //methodName()
+    //{  //code to executew
+        // methodName();
+    //}
+    static int count = 0;
+   
+    public static void printHello () {
+        count++;
+        if(count<=5) {
+          System.out.println("Hello");
+          printHello ();
+        }
+    }
+   
+    public static void main (String args []) {
+        printHello ();
+    }
+}
+
+
+
+public class BinaryTreeExam {
+private TreeNode root;
+
+private class TreeNode{
+private int data;
+private TreeNode left;
+private TreeNode right;
+
+public TreeNode(int data){
+this.data = data;
+}
+}
+
+public void insert(int value){
+root = insert(root, value);
+}
+
+public TreeNode insert( TreeNode root, int value){
+if (root == null || root.data == value){
+root = new TreeNode(value);
+return root;
+}
+if (value < root.data){
+root.left = insert(root.left, value);
+} else {
+root.right = insert(root.right, value);
+}
+return root;
+}
+
+public void inOrder(TreeNode root) {
+if(root == null) {
+return;
+}
+
+inOrder(root.left);
+System.out.print(root.data + " ");
+inOrder(root.right);
+}
+
+public TreeNode search(TreeNode root, int key){
+if (root == null || root.data == key){
+return root;
+}
+if (key < root.data){
+return search(root.left, key);
+} else {
+return search(root.right, key);
+}
+}
+
+public static void main(String[] args) {
+BinaryTreeExam tree = new BinaryTreeExam();
+tree.insert(5);
+tree.insert(5);
+tree.insert(7);
+tree.insert(3);
+tree.insert(1);
+
+tree.inOrder(tree.root);
+System.out.println("Searching ::::::::::::::::");
+TreeNode temp = tree.search(tree.root, 7);
+if(temp == null)
+System.out.println("No data fount");
+else
+System.out.println(temp.data);
+}
+}

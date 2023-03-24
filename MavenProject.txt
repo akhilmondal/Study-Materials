@@ -1,0 +1,40 @@
+Maven Project:-
+Maven is a powerful project management tool that is based on POM (project object model). 
+It is used for projects build, dependency and documentation.
+
+Project Object Model (POM) file
+
+There are two way to generate Maven Project:
+
+1. By using command prompt
+	a. mvn archetype:generate
+    b.mvn archetype:generate -DgroupId=groupid -DartifactId=artifactid -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=booleanValue
+
+2. By using IDEs
+	
+	
+	Project github
+				/
+				develop          master
+				
+				1.0-SNAPSHOT      1.0
+				
+				//beta version
+				//
+				
+				jar => .class= 01010101 = 
+				
+				mvn clean install == > clear jar=> compile => testcase=>build=>jar=> AWS/S3 or Jfrog
+				
+				Jenkins => gitHub
+				  
+				  iGit
+				  develop=> PLAT-1231-Config-JUnit
+				  
+				  
+				  Junit.jar=> 010101 =>
+				  
+				  npm install => node
+				  mvn install => java/maven project
+				  
+				
