@@ -13,3 +13,55 @@ collect(Collector<T, A, R> collector): This method returns the result of collect
 sorted(): This method returns a new stream consisting of the elements of the original stream sorted in natural order. The natural order is determined by the Comparable interface, which defines a natural ordering for the elements of a class.
 
 These are just a few examples of the many methods available in the Stream API. The Stream API provides a powerful set of tools for performing data processing operations in a concise and readable manner, and can greatly simplify the code required for common tasks such as filtering, mapping, and reducing collections of data.
+
+
+
+
+
+Stream API :
+
+Stream =>  collecting the data
+
+filter => for condition check // internally use predicate  // return true and false
+map=> to perform some bussiness logic // internally use Functional interface //return any type of data
+count = how many elements in stream?
+reduce
+collect
+
+class Student {
+ 
+String name;
+int roll;
+int mark;
+
+Student (String name, int roll, int mark){
+this.name= name;
+this.roll = roll;
+this.mark = mark;
+}
+
+}
+
+                                    name   roll  mark
+Student s1 = new Student("Ganesh",23, 100);
+Student s2 = new Student("Akhil",25, 120);
+Student s3 = new Student("Ashu",24, 135);
+
+
+List<Student> list = new ArrayList<>();
+
+list.add(s1);
+list.add(s2);
+list.add(s3);
+
+List<Student> obj = list.stream().filter( ele -> ele.mark > 100).collect(Collection.toList());
+
+// addition of all marks
+// sorted with roll => 23 24 25
+reduce()
+
+
+
+Practice these:
+Reduce filter map collect sorted
+min max all Match any match noneMatch
