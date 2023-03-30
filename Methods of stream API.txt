@@ -1,0 +1,15 @@
+Sure, let me provide a brief description of some of the common methods available in the Stream API:
+
+filter(Predicate<T> predicate): This method returns a new stream consisting of the elements of the original stream that match the given predicate. The predicate is a functional interface that takes an element of the stream and returns a boolean value indicating whether the element should be included in the filtered stream.
+
+map(Function<T, R> mapper): This method returns a new stream consisting of the results of applying the given function to the elements of the original stream. The mapper is a functional interface that takes an element of the stream and returns a transformed element of a different type.
+
+flatMap(Function<T, Stream<R>> mapper): This method returns a new stream consisting of the results of replacing each element of the original stream with the contents of a new stream produced by applying the given function to that element. The mapper is a functional interface that takes an element of the stream and returns a stream of transformed elements.
+
+reduce(T identity, BinaryOperator<T> accumulator): This method returns the result of applying the given binary operator to the elements of the stream, starting with the given identity value. The accumulator is a functional interface that takes two elements of the stream and returns a single element. The identity value serves as the initial value for the accumulator.
+
+collect(Collector<T, A, R> collector): This method returns the result of collecting the elements of the stream into a container using the specified collector. The collector is a functional interface that defines how to accumulate the elements into an intermediate container of type A, and then how to transform the intermediate container into the final result of type R.
+
+sorted(): This method returns a new stream consisting of the elements of the original stream sorted in natural order. The natural order is determined by the Comparable interface, which defines a natural ordering for the elements of a class.
+
+These are just a few examples of the many methods available in the Stream API. The Stream API provides a powerful set of tools for performing data processing operations in a concise and readable manner, and can greatly simplify the code required for common tasks such as filtering, mapping, and reducing collections of data.
